@@ -1,0 +1,6 @@
+framework module Pods_Manawadu_M_S_Cobsccomp171p008 {
+  umbrella header "Pods-Manawadu M.S-Cobsccomp171p008-umbrella.h"
+
+  export *
+  module * { export * }
+}
