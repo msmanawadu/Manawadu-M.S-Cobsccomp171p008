@@ -16,6 +16,15 @@ class LoginViewController: UIViewController,  GIDSignInDelegate, GIDSignInUIDele
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        
+        // BUTTON BORDER
+        self.doBtnLogin.layer.borderWidth = 1.0
+        
+        // BUTTON CORNER ROUND
+        self.doBtnLogin.layer.cornerRadius = self.doBtnLogin.bounds.height / 2
+        
+        
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance()?.delegate = self
         
