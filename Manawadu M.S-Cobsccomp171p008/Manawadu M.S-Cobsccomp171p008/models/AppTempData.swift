@@ -12,7 +12,7 @@ import Firebase
 import FirebaseAuth
 
 class AppTempData {
-    // user handling model
+    // user authentication listener handling
     static var userHandler: AuthStateDidChangeListenerHandle?
     
 }

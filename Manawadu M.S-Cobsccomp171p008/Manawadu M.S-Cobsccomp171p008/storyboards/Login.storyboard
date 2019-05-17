@@ -39,6 +39,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="doBtnLogin:" destination="M1c-k2-FDd" eventType="touchUpInside" id="rO1-v1-QQP"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2T4-77-wAb">
                                         <rect key="frame" x="8" y="171" width="398" height="30"/>
@@ -58,6 +61,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Forgot Password ?"/>
+                                        <connections>
+                                            <action selector="doBtnForgotPassword:" destination="M1c-k2-FDd" eventType="touchUpInside" id="ucK-b6-i4b"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPl-Y2-jYu">
                                         <rect key="frame" x="164" y="383" width="86" height="42"/>
@@ -67,6 +73,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="doBtnSignUp:" destination="M1c-k2-FDd" eventType="touchUpInside" id="D2J-kz-rfw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.85500724691173113" blue="0.34854413564159359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -98,6 +107,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AM6-9W-8kz"/>
                     </view>
+                    <connections>
+                        <outlet property="doBtnForgotPassword" destination="B3z-7R-7Gf" id="NqM-XV-zjf"/>
+                        <outlet property="doBtnLogin" destination="MKx-IQ-HhO" id="dGL-4D-bzb"/>
+                        <outlet property="doBtnSignUp" destination="DPl-Y2-jYu" id="5yn-Ck-krq"/>
+                        <outlet property="tfEmail" destination="VKq-4c-9Xc" id="oZ9-my-owa"/>
+                        <outlet property="tfPassword" destination="2T4-77-wAb" id="oS7-eg-rYw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHS-Ru-8DO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

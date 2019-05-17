@@ -19,18 +19,17 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        // User handling via AppTempData model
+        // User authentication handling via AppTempData model
         
         AppTempData.userHandler = Auth.auth().addStateDidChangeListener{(auth, user) in
-            // check whether is there a user who already logged in ?
+            // check whether is there a user who has already logged in ?
             if user == nil {
         self.performSegue(withIdentifier: "Login", sender: nil)
             } else
-            {
-                
+               {
         self.performSegue(withIdentifier: "Home", sender: nil)
     
-}
-}
-}
+               }
+                                                }
+                                                    }
 }
