@@ -77,6 +77,14 @@
                                             <action selector="doBtnSignUp:" destination="M1c-k2-FDd" eventType="touchUpInside" id="D2J-kz-rfw"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ST-iW-WlB" customClass="GIDSignInButton">
+                                        <rect key="frame" x="8" y="433" width="398" height="38"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="baJ-w9-ljL"/>
+                                            <constraint firstAttribute="width" constant="398" id="dr2-UT-mnR"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.85500724691173113" blue="0.34854413564159359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -86,11 +94,14 @@
                                     <constraint firstAttribute="bottom" secondItem="MKx-IQ-HhO" secondAttribute="bottom" constant="464" id="4Ya-Q2-rnx"/>
                                     <constraint firstItem="VKq-4c-9Xc" firstAttribute="leading" secondItem="QvJ-J1-zGM" secondAttribute="leading" constant="8" id="9RC-f6-zZm"/>
                                     <constraint firstAttribute="bottom" secondItem="B3z-7R-7Gf" secondAttribute="bottom" constant="386" id="FP1-Sz-M1w"/>
+                                    <constraint firstAttribute="trailing" secondItem="2ST-iW-WlB" secondAttribute="trailing" constant="8" id="Fln-1k-Dsv"/>
                                     <constraint firstAttribute="bottom" secondItem="DPl-Y2-jYu" secondAttribute="bottom" constant="311" id="Fwf-D1-OoS"/>
                                     <constraint firstAttribute="trailing" secondItem="B3z-7R-7Gf" secondAttribute="trailing" constant="104" id="Rh1-93-HnX"/>
+                                    <constraint firstItem="2ST-iW-WlB" firstAttribute="top" secondItem="DPl-Y2-jYu" secondAttribute="bottom" constant="8" id="Vdv-ER-9b2"/>
                                     <constraint firstItem="2T4-77-wAb" firstAttribute="leading" secondItem="QvJ-J1-zGM" secondAttribute="leading" constant="8" id="dBw-2J-HWB"/>
                                     <constraint firstItem="VKq-4c-9Xc" firstAttribute="top" secondItem="QvJ-J1-zGM" secondAttribute="top" constant="116" id="f9Z-GK-Lno"/>
                                     <constraint firstAttribute="trailing" secondItem="DPl-Y2-jYu" secondAttribute="trailing" constant="164" id="klu-06-qqC"/>
+                                    <constraint firstItem="2ST-iW-WlB" firstAttribute="leading" secondItem="QvJ-J1-zGM" secondAttribute="leading" constant="8" id="qwZ-o8-uu1"/>
                                     <constraint firstAttribute="trailing" secondItem="VKq-4c-9Xc" secondAttribute="trailing" constant="8" id="scl-4u-00f"/>
                                     <constraint firstAttribute="trailing" secondItem="MKx-IQ-HhO" secondAttribute="trailing" constant="8" id="uXM-dg-Fo5"/>
                                     <constraint firstItem="DPl-Y2-jYu" firstAttribute="leading" secondItem="QvJ-J1-zGM" secondAttribute="leading" constant="164" id="vvp-m6-CWm"/>
