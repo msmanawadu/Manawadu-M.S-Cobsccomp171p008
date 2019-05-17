@@ -32,10 +32,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="FXH-KN-Jdv" kind="show" identifier="Login" id="iyK-eK-dYA"/>
+                        <segue destination="l8V-6H-kEa" kind="show" identifier="Home" id="MSF-4t-WKW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-65.217391304347828" y="105.97826086956522"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="cN3-TW-yTH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="FXH-KN-Jdv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqn-hj-gJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="-170"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="uE6-G0-xUj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="l8V-6H-kEa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhf-fd-I4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="14"/>
         </scene>
     </scenes>
 </document>

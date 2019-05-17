@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -14,7 +16,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // User handling via AppTempData model
+        
+        AppTempData.userHandler = Auth.auth().addStateDidChangeListener{(auth, user) in
+            // check whether is there a user who already logged in ?
+            if user == nil {
+        self.performSegue(withIdentifier: "Login", sender: nil)
+            } else
+            {
+                
+        self.performSegue(withIdentifier: "Home", sender: nil)
+    
 }
-
+}
+}
+}
