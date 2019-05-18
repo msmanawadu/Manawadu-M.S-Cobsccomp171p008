@@ -10,13 +10,34 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var student:[Student] = []
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Firebase RTDB reference
+        ref = Database.database().reference()
 
         // Do any additional setup after loading the view.
     }
+    
+    // cell registration
+    func cellRegistration() {
+        self.tableView.register((UINib(nibName: "prototypeCell", bundle: nil)), forCellReuseIdentifier: "prototypeCell")
+        }
+    
+    
+   
+    
+    
+    
     
     @IBAction func doBtnSignOut(_ sender: UIBarButtonItem) {
         
