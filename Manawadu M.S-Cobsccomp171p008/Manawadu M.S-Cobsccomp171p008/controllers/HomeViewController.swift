@@ -54,7 +54,7 @@ func getStudentListData(){
             
              //debugging
      
-            print(snapshot)
+           // print(snapshot)
      
             var newstudent: [Student] = []
      

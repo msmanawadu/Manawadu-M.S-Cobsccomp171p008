@@ -40,19 +40,6 @@ class ViewController: UIViewController {
     
      var ref: DatabaseReference!
     
-    func saveData(){
-       
-        ref = Database.database().reference().child("StudentData/Students").childByAutoId()
-        
-        let data = [
-            "fName": "Sandeepa",
-            "lName": "Manawadu",
-            "phoneNumber": 0765505236,
-            "fbProfileURL": "Manawadufb.com",
-            "city": "Mathara",
-            "profileImageURL": "https://pics.tixuz.com/pics2/pk/3/2018/05/26/thumbnails/4309705pk484530.jpg"
-            ] as [String : Any]
-        
-        ref.setValue(data)
-    }
+    
+    
 }
