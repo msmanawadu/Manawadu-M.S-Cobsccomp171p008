@@ -9,8 +9,12 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Kingfisher
+
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    
     
     
     
@@ -24,17 +28,60 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //Firebase RTDB reference
         ref = Database.database().reference()
+        
+        self.cellRegistration()
+       self.getStudentListData()
+        self.tableView.tableFooterView = UIView()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        
+        
 
         // Do any additional setup after loading the view.
     }
     
     // cell registration
     func cellRegistration() {
-        self.tableView.register((UINib(nibName: "prototypeCell", bundle: nil)), forCellReuseIdentifier: "prototypeCell")
+        self.tableView.register((UINib(nibName: "HomeTableViewCell", bundle: nil)), forCellReuseIdentifier: "HomeTableViewCell")
         }
     
     
-   
+    // to get student list data to array
+func getStudentListData(){
+        self.ref.child("StudentData/Students").observeSingleEvent(of: .value, with:{(snapshot) in
+            
+             //debugging
+     
+            print(snapshot)
+     
+            var newstudent: [Student] = []
+     
+            if snapshot.childrenCount > 0 {
+     
+                for student in snapshot.children.allObjects as![DataSnapshot] {
+                    
+     //key, object creation
+    
+                    let studentObject = student.value as? [String: AnyObject]
+     
+   let student = Student(fName:studentObject!["fName"] as! String, lName:studentObject!["lName"] as! String, phoneNumber: studentObject!["phoneNumber"] as! Int, fbProfileURL: studentObject!["fbProfileURL"] as! String, city: studentObject!["city"] as! String, profileImageURL: studentObject!["profileImageURL"] as! String)
+     
+        newstudent.append(student)
+                }
+            }
+        self.student = newstudent
+            
+         //reload the data to the view
+     
+            self.tableView.reloadData()
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        
+    }
     
     
     
@@ -52,6 +99,26 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.dismiss(animated: true)
         
     }
+    // cell setup
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return self.student.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let studentCell = tableView.dequeueReusableCell(withIdentifier: "studentcell", for: indexPath) as! HomeTableViewCell
+        
+    let imgURL = URL(string:self.student[indexPath.row].profileImageURL)
+        
+        studentCell.profileImageView.kf.setImage(with: imgURL)
+        studentCell.name.text = self.student[indexPath.row].fName + " " + self.student[indexPath.row].lName
+        studentCell.city.text = self.student[indexPath.row].city
+        
+    
+        return studentCell
+        
+    }
+    
     
 
     /*
@@ -64,4 +131,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     */
 
+
+    
 }

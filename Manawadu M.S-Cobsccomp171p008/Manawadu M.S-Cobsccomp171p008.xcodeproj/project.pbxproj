@@ -19,7 +19,7 @@
 		38ED9553228EF40800FF424D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ED9552228EF40800FF424D /* HomeViewController.swift */; };
 		38ED9555228EFAA500FF424D /* AppTempData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ED9554228EFAA500FF424D /* AppTempData.swift */; };
 		38ED9559228FC6F200FF424D /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ED9558228FC6F200FF424D /* HomeTableViewCell.swift */; };
-		38ED955B228FCEAE00FF424D /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ED955A228FCEAE00FF424D /* Student.swift */; };
+		38ED955D22902FC700FF424D /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ED955C22902FC700FF424D /* Student.swift */; };
 		7236EFDE62950E2C167D310B /* Pods_Manawadu_M_S_Cobsccomp171p008.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA6B79D2417B3111EC1B3FC /* Pods_Manawadu_M_S_Cobsccomp171p008.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,7 @@
 		38ED9552228EF40800FF424D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		38ED9554228EFAA500FF424D /* AppTempData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTempData.swift; sourceTree = "<group>"; };
 		38ED9558228FC6F200FF424D /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		38ED955A228FCEAE00FF424D /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		38ED955C22902FC700FF424D /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		3FA6B79D2417B3111EC1B3FC /* Pods_Manawadu_M_S_Cobsccomp171p008.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manawadu_M_S_Cobsccomp171p008.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F649E98A70BD207DFB5B6145 /* Pods-Manawadu M.S-Cobsccomp171p008.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manawadu M.S-Cobsccomp171p008.release.xcconfig"; path = "Target Support Files/Pods-Manawadu M.S-Cobsccomp171p008/Pods-Manawadu M.S-Cobsccomp171p008.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,8 +110,8 @@
 		38ED9546228EE84A00FF424D /* models */ = {
 			isa = PBXGroup;
 			children = (
+				38ED955C22902FC700FF424D /* Student.swift */,
 				38ED9554228EFAA500FF424D /* AppTempData.swift */,
-				38ED955A228FCEAE00FF424D /* Student.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 				38E638BF228ED5DD00DF63E1 /* ViewController.swift in Sources */,
 				38ED9555228EFAA500FF424D /* AppTempData.swift in Sources */,
 				38E638BD228ED5DD00DF63E1 /* AppDelegate.swift in Sources */,
-				38ED955B228FCEAE00FF424D /* Student.swift in Sources */,
+				38ED955D22902FC700FF424D /* Student.swift in Sources */,
 				38ED9553228EF40800FF424D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
