@@ -63,6 +63,7 @@
                                         <state key="normal" title="Forgot Password ?"/>
                                         <connections>
                                             <action selector="doBtnForgotPassword:" destination="M1c-k2-FDd" eventType="touchUpInside" id="ucK-b6-i4b"/>
+                                            <segue destination="aul-7G-E1e" kind="show" id="oqZ-vF-2Jc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPl-Y2-jYu">
@@ -130,6 +131,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHS-Ru-8DO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1062.3188405797102" y="12.228260869565219"/>
+        </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="9yP-K1-dwm">
+            <objects>
+                <viewController id="aul-7G-E1e" customClass="ForgotPasswordViewController" customModule="Manawadu_M_S_Cobsccomp171p008" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z5g-oC-2K2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gcx-d2-2P4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email for password reset" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ySU-ON-Uso">
+                                        <rect key="frame" x="8" y="28" width="398" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="398" id="GFh-kR-fDP"/>
+                                            <constraint firstAttribute="height" constant="34" id="IFi-U3-t7E"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpm-Ys-nip">
+                                        <rect key="frame" x="125" y="139" width="172" height="42"/>
+                                        <color key="backgroundColor" red="1" green="0.73440032509999997" blue="0.1873609413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="u0k-7n-jcV"/>
+                                            <constraint firstAttribute="width" constant="172" id="ug9-uJ-709"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Reset Password">
+                                            <color key="titleColor" red="0.20159183" green="0.66666668650000005" blue="0.2072140515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doBtnResetPassword:" destination="aul-7G-E1e" eventType="touchUpInside" id="ZhZ-Fs-LHW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MM-Zg-ABE">
+                                        <rect key="frame" x="125" y="227" width="172" height="42"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="172" id="KHU-TZ-3nW"/>
+                                            <constraint firstAttribute="height" constant="42" id="ccY-y3-TGm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="1" green="0.04677283753" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doBtnCancel:" destination="aul-7G-E1e" eventType="touchUpInside" id="vQm-Ae-c4f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30152100967123541" green="0.59999309567013615" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="736" id="3Lf-hd-DcU"/>
+                                    <constraint firstItem="ySU-ON-Uso" firstAttribute="top" secondItem="Gcx-d2-2P4" secondAttribute="top" constant="28" id="AVF-dY-FYB"/>
+                                    <constraint firstAttribute="bottom" secondItem="2MM-Zg-ABE" secondAttribute="bottom" constant="467" id="GyI-If-Cep"/>
+                                    <constraint firstAttribute="trailing" secondItem="dpm-Ys-nip" secondAttribute="trailing" constant="117" id="Ihx-69-Ff0"/>
+                                    <constraint firstAttribute="trailing" secondItem="2MM-Zg-ABE" secondAttribute="trailing" constant="117" id="Iw0-BN-eZM"/>
+                                    <constraint firstAttribute="trailing" secondItem="ySU-ON-Uso" secondAttribute="trailing" constant="8" id="JM6-mB-3Dt"/>
+                                    <constraint firstItem="ySU-ON-Uso" firstAttribute="leading" secondItem="Gcx-d2-2P4" secondAttribute="leading" constant="8" id="R15-W3-Zm0"/>
+                                    <constraint firstItem="dpm-Ys-nip" firstAttribute="leading" secondItem="Gcx-d2-2P4" secondAttribute="leading" constant="125" id="cnO-bY-yZn"/>
+                                    <constraint firstItem="2MM-Zg-ABE" firstAttribute="leading" secondItem="Gcx-d2-2P4" secondAttribute="leading" constant="125" id="eaW-Se-sed"/>
+                                    <constraint firstAttribute="width" constant="414" id="zKl-LE-NHn"/>
+                                    <constraint firstItem="dpm-Ys-nip" firstAttribute="top" secondItem="ySU-ON-Uso" secondAttribute="bottom" constant="77" id="zPQ-pm-Imw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gcx-d2-2P4" firstAttribute="bottom" secondItem="Lp6-94-Zv1" secondAttribute="bottom" id="CGW-6I-Ee8"/>
+                            <constraint firstItem="Gcx-d2-2P4" firstAttribute="top" secondItem="z5g-oC-2K2" secondAttribute="top" id="OBw-uJ-ZEf"/>
+                            <constraint firstItem="Gcx-d2-2P4" firstAttribute="trailing" secondItem="Lp6-94-Zv1" secondAttribute="trailing" id="OUe-XZ-JO3"/>
+                            <constraint firstItem="Gcx-d2-2P4" firstAttribute="leading" secondItem="Lp6-94-Zv1" secondAttribute="leading" id="aTi-wH-vbx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lp6-94-Zv1"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="2MM-Zg-ABE" id="PIt-Z9-zEe"/>
+                        <outlet property="resetPasswordBtn" destination="dpm-Ys-nip" id="Sau-VM-qiW"/>
+                        <outlet property="tfForgotPassword" destination="ySU-ON-Uso" id="HnF-Gk-gud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKr-jc-MRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2180" y="394"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XlT-kc-l5e">
