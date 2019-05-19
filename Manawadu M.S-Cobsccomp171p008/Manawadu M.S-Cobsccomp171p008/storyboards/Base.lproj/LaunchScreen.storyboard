@@ -17,13 +17,58 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQ2-Mu-nW2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Cbs-ho-g64">
+                                        <rect key="frame" x="8" y="254" width="398" height="229"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="398" id="05n-mu-DlD"/>
+                                            <constraint firstAttribute="height" constant="229" id="X11-gg-upX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIBMConnect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuV-9y-Mga">
+                                        <rect key="frame" x="116" y="545" width="183" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="183" id="1eQ-rZ-kvb"/>
+                                            <constraint firstAttribute="height" constant="36" id="NH7-bp-eX4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.0048405877977927281" green="0.076268191458786938" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.57917455767110648" green="1" blue="0.90057753076364244" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="QuV-9y-Mga" secondAttribute="bottom" constant="155" id="1g4-XC-84J"/>
+                                    <constraint firstItem="QuV-9y-Mga" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="116" id="BDB-UG-Un6"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cbs-ho-g64" secondAttribute="bottom" constant="253" id="WaA-eF-Gwo"/>
+                                    <constraint firstAttribute="width" constant="414" id="b3J-Vd-oNj"/>
+                                    <constraint firstAttribute="trailing" secondItem="QuV-9y-Mga" secondAttribute="trailing" constant="115" id="d6Q-Jq-Ni6"/>
+                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="8" id="l16-Xf-zl9"/>
+                                    <constraint firstAttribute="height" constant="736" id="ptV-pM-thz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cbs-ho-g64" secondAttribute="trailing" constant="8" id="tqq-Ul-Erq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HQ2-Mu-nW2" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Guj-uP-vMp"/>
+                            <constraint firstItem="HQ2-Mu-nW2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WZD-qR-QFe"/>
+                            <constraint firstItem="HQ2-Mu-nW2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="o2S-cR-yy5"/>
+                            <constraint firstItem="HQ2-Mu-nW2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pqP-6x-So0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="374.18478260869568"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="300" height="172"/>
+    </resources>
 </document>
