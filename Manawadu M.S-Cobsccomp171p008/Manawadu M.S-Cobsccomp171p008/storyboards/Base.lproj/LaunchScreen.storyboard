@@ -32,7 +32,6 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIBMConnect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuV-9y-Mga">
                                         <rect key="frame" x="116" y="545" width="183" height="36"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="183" id="1eQ-rZ-kvb"/>
                                             <constraint firstAttribute="height" constant="36" id="NH7-bp-eX4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -46,7 +45,7 @@
                                     <constraint firstItem="QuV-9y-Mga" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="116" id="BDB-UG-Un6"/>
                                     <constraint firstAttribute="bottom" secondItem="Cbs-ho-g64" secondAttribute="bottom" constant="253" id="WaA-eF-Gwo"/>
                                     <constraint firstAttribute="width" constant="414" id="b3J-Vd-oNj"/>
-                                    <constraint firstAttribute="trailing" secondItem="QuV-9y-Mga" secondAttribute="trailing" constant="115" id="d6Q-Jq-Ni6"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QuV-9y-Mga" secondAttribute="trailing" constant="20" symbolic="YES" id="d6Q-Jq-Ni6"/>
                                     <constraint firstItem="Cbs-ho-g64" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="8" id="l16-Xf-zl9"/>
                                     <constraint firstAttribute="height" constant="736" id="ptV-pM-thz"/>
                                     <constraint firstAttribute="trailing" secondItem="Cbs-ho-g64" secondAttribute="trailing" constant="8" id="tqq-Ul-Erq"/>
