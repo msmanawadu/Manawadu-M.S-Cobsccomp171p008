@@ -38,6 +38,7 @@ class addStudentDataViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var doBtnAddPhoto: UIButton!
+    
     @IBOutlet weak var fName: UITextField!
     @IBOutlet weak var lName: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
@@ -98,6 +99,7 @@ class addStudentDataViewController: UIViewController {
         let imgTap = UITapGestureRecognizer(target: self, action: #selector(openImgPick))
         profileImage.isUserInteractionEnabled = true
         profileImage.addGestureRecognizer(imgTap)
+        
         doBtnAddPhoto.addTarget(self, action: #selector(openImgPick), for: .touchUpInside)
 
     
