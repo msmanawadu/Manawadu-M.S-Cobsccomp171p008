@@ -119,6 +119,26 @@ func getStudentListData(){
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showData" {
+            let selectedIndex = sender as! Int
+            let selectedStd = self.student[selectedIndex]
+            
+          let studentData = segue.destination as! viewUserDetailsViewController
+            studentData.studentDetails = selectedStd
+            
+        }
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showData", sender: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
+    
     
 
     /*
