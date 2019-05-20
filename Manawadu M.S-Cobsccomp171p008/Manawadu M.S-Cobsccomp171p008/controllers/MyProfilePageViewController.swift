@@ -169,7 +169,8 @@ class MyProfilePageViewController: UIViewController {
                             "lName": self.lastName,
                             "age": self.userAge,
                             "phoneNumber": self.phoneNo,
-                            "birthDay": self.birthDay] as [String: Any]
+                            "birthDay": self.birthDay,
+                            "profImag": self.imageDownloadURL] as [String: Any]
                 
             
             self.dataBaseRef!.setValue(user){errorsave, ref in

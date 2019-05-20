@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--myProfile-->
+        <scene sceneID="uWx-xk-Ldl">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="myProfile" storyboardName="myProfile" id="OLC-DG-5ro" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7R-Ub-I6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785" y="-757"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="wnm-67-DlZ">
             <objects>
@@ -106,11 +114,18 @@
                                 <action selector="doBtnSignOut:" destination="0Cq-rJ-BYh" id="okn-z3-oQi"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Err-er-9I1">
-                            <connections>
-                                <segue destination="JED-fi-Hg6" kind="show" id="p0h-Ju-EBR"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="Err-er-9I1">
+                                <connections>
+                                    <segue destination="JED-fi-Hg6" kind="show" id="p0h-Ju-EBR"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="My Profile" id="PQc-Xy-qIx">
+                                <connections>
+                                    <segue destination="OLC-DG-5ro" kind="show" id="GpQ-iu-Qo7"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="RaH-UX-MUL" id="f8J-ci-Zb8"/>

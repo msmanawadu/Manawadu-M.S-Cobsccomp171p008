@@ -10,6 +10,9 @@
 		380C96972290FB0F00397D17 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C96962290FB0F00397D17 /* ForgotPasswordViewController.swift */; };
 		380C969922918F2D00397D17 /* MyProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C969822918F2D00397D17 /* MyProfilePageViewController.swift */; };
 		380C969B2291E07100397D17 /* viewUserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C969A2291E07100397D17 /* viewUserDetailsViewController.swift */; };
+		380C969F2291EB7C00397D17 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C969E2291EB7C00397D17 /* User.swift */; };
+		380C96A12291EC7600397D17 /* myProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380C96A02291EC7600397D17 /* myProfile.storyboard */; };
+		380C96A32291EE9700397D17 /* userProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C96A22291EE9700397D17 /* userProfileView.swift */; };
 		3853412D2290625100869B1D /* addStudentDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853412C2290625100869B1D /* addStudentDataViewController.swift */; };
 		38E638BD228ED5DD00DF63E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E638BC228ED5DD00DF63E1 /* AppDelegate.swift */; };
 		38E638BF228ED5DD00DF63E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E638BE228ED5DD00DF63E1 /* ViewController.swift */; };
@@ -32,6 +35,9 @@
 		380C96962290FB0F00397D17 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		380C969822918F2D00397D17 /* MyProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfilePageViewController.swift; sourceTree = "<group>"; };
 		380C969A2291E07100397D17 /* viewUserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewUserDetailsViewController.swift; sourceTree = "<group>"; };
+		380C969E2291EB7C00397D17 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		380C96A02291EC7600397D17 /* myProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = myProfile.storyboard; sourceTree = "<group>"; };
+		380C96A22291EE9700397D17 /* userProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userProfileView.swift; sourceTree = "<group>"; };
 		3853412C2290625100869B1D /* addStudentDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addStudentDataViewController.swift; sourceTree = "<group>"; };
 		38E638B9228ED5DD00DF63E1 /* Manawadu M.S-Cobsccomp171p008.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Manawadu M.S-Cobsccomp171p008.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E638BC228ED5DD00DF63E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 			children = (
 				38ED955C22902FC700FF424D /* Student.swift */,
 				38ED9554228EFAA500FF424D /* AppTempData.swift */,
+				380C969E2291EB7C00397D17 /* User.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -141,6 +148,7 @@
 				380C96962290FB0F00397D17 /* ForgotPasswordViewController.swift */,
 				380C969822918F2D00397D17 /* MyProfilePageViewController.swift */,
 				380C969A2291E07100397D17 /* viewUserDetailsViewController.swift */,
+				380C96A22291EE9700397D17 /* userProfileView.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 				38E638C5228ED5DE00DF63E1 /* LaunchScreen.storyboard */,
 				38ED954A228EEB8300FF424D /* Home.storyboard */,
 				38ED954C228EEC8B00FF424D /* Login.storyboard */,
+				380C96A02291EC7600397D17 /* myProfile.storyboard */,
 			);
 			path = storyboards;
 			sourceTree = "<group>";
@@ -217,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				380C96A12291EC7600397D17 /* myProfile.storyboard in Resources */,
 				38E638C7228ED5DE00DF63E1 /* LaunchScreen.storyboard in Resources */,
 				38ED954B228EEB8300FF424D /* Home.storyboard in Resources */,
 				38ED954D228EEC8B00FF424D /* Login.storyboard in Resources */,
@@ -324,8 +334,10 @@
 				38E638BD228ED5DD00DF63E1 /* AppDelegate.swift in Sources */,
 				380C96972290FB0F00397D17 /* ForgotPasswordViewController.swift in Sources */,
 				38ED955D22902FC700FF424D /* Student.swift in Sources */,
+				380C969F2291EB7C00397D17 /* User.swift in Sources */,
 				3853412D2290625100869B1D /* addStudentDataViewController.swift in Sources */,
 				38ED9553228EF40800FF424D /* HomeViewController.swift in Sources */,
+				380C96A32291EE9700397D17 /* userProfileView.swift in Sources */,
 				380C969922918F2D00397D17 /* MyProfilePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
