@@ -21,34 +21,34 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQ2-Mu-nW2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Cbs-ho-g64">
-                                        <rect key="frame" x="8" y="254" width="398" height="229"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Cbs-ho-g64">
+                                        <rect key="frame" x="57" y="218" width="300" height="300"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="398" id="05n-mu-DlD"/>
-                                            <constraint firstAttribute="height" constant="229" id="X11-gg-upX"/>
+                                            <constraint firstAttribute="width" constant="300" id="Dct-ff-DWY"/>
+                                            <constraint firstAttribute="height" constant="300" id="stI-CY-gqA"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIBMConnect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuV-9y-Mga">
-                                        <rect key="frame" x="116" y="545" width="183" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="NH7-bp-eX4"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="0.0048405877977927281" green="0.076268191458786938" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2019. All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuV-9y-Mga">
+                                        <rect key="frame" x="37" y="704" width="340" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.96869110881159126" blue="0.98281482783694663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.57917455767110648" green="1" blue="0.90057753076364244" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.19505518674850464" green="0.65375173091888428" blue="0.98985236883163452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="QuV-9y-Mga" secondAttribute="bottom" constant="155" id="1g4-XC-84J"/>
-                                    <constraint firstItem="QuV-9y-Mga" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="116" id="BDB-UG-Un6"/>
-                                    <constraint firstAttribute="bottom" secondItem="Cbs-ho-g64" secondAttribute="bottom" constant="253" id="WaA-eF-Gwo"/>
+                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="top" secondItem="HQ2-Mu-nW2" secondAttribute="top" constant="218" id="AWq-UH-vhj"/>
+                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="centerX" secondItem="HQ2-Mu-nW2" secondAttribute="centerX" id="EVJ-qf-9wC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cbs-ho-g64" secondAttribute="trailing" constant="57" id="EdZ-j8-e2b"/>
+                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="57" id="Q6N-Cv-DOC"/>
+                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="centerY" secondItem="HQ2-Mu-nW2" secondAttribute="centerY" id="ajV-zZ-Xy9"/>
                                     <constraint firstAttribute="width" constant="414" id="b3J-Vd-oNj"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QuV-9y-Mga" secondAttribute="trailing" constant="20" symbolic="YES" id="d6Q-Jq-Ni6"/>
-                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="8" id="l16-Xf-zl9"/>
+                                    <constraint firstItem="QuV-9y-Mga" firstAttribute="bottom" secondItem="HQ2-Mu-nW2" secondAttribute="bottomMargin" id="cge-eY-ZYM"/>
+                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="centerY" secondItem="HQ2-Mu-nW2" secondAttribute="centerY" id="pOP-wv-L4K"/>
                                     <constraint firstAttribute="height" constant="736" id="ptV-pM-thz"/>
-                                    <constraint firstAttribute="trailing" secondItem="Cbs-ho-g64" secondAttribute="trailing" constant="8" id="tqq-Ul-Erq"/>
+                                    <constraint firstItem="QuV-9y-Mga" firstAttribute="centerX" secondItem="Cbs-ho-g64" secondAttribute="centerX" id="td5-ci-vSv"/>
+                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="centerX" secondItem="HQ2-Mu-nW2" secondAttribute="centerX" id="xXL-Be-c28"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -64,10 +64,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="374.18478260869568"/>
+            <point key="canvasLocation" x="-223.18840579710147" y="376.63043478260875"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="300" height="172"/>
+        <image name="launchLogo" width="800" height="800"/>
     </resources>
 </document>
