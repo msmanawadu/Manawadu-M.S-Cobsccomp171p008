@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b4d-dY-Vjp">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notes View Controller-->
+        <scene sceneID="nnJ-a8-lC1">
+            <objects>
+                <viewController id="b4d-dY-Vjp" customClass="NotesViewController" customModule="Manawadu_M_S_Cobsccomp171p008" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4wP-VJ-Ma3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMd-3X-ffm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="prs-py-viM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="rWU-64-RJ5">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rWU-64-RJ5" id="ani-EK-hwD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="prs-py-viM" firstAttribute="leading" secondItem="YMd-3X-ffm" secondAttribute="leading" id="2XC-FW-eoz"/>
+                                    <constraint firstAttribute="bottom" secondItem="prs-py-viM" secondAttribute="bottom" id="4aE-Ay-Rgk"/>
+                                    <constraint firstItem="prs-py-viM" firstAttribute="top" secondItem="YMd-3X-ffm" secondAttribute="top" id="FNz-ta-cZM"/>
+                                    <constraint firstAttribute="trailing" secondItem="prs-py-viM" secondAttribute="trailing" id="iEv-NX-vq2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="YMd-3X-ffm" secondAttribute="bottom" id="7fn-r0-m5C"/>
+                            <constraint firstItem="YMd-3X-ffm" firstAttribute="leading" secondItem="4wP-VJ-Ma3" secondAttribute="leading" id="DZL-qF-YyF"/>
+                            <constraint firstAttribute="trailing" secondItem="YMd-3X-ffm" secondAttribute="trailing" id="VYk-Bp-x3X"/>
+                            <constraint firstItem="YMd-3X-ffm" firstAttribute="top" secondItem="4wP-VJ-Ma3" secondAttribute="top" id="sCI-tl-XPI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CPI-QA-ofB"/>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="prs-py-viM" id="KGW-3b-09G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jKe-sJ-zGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="5.7065217391304355"/>
+        </scene>
+    </scenes>
+</document>
