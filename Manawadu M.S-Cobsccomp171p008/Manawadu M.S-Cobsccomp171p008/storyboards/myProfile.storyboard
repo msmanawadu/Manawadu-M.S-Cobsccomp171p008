@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yKe-9S-O05">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ai-c2-73w">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--User Profile View-->
         <scene sceneID="EDm-aC-yeZ">
             <objects>
-                <viewController id="qAI-nC-mrN" customClass="userProfileView" customModule="Manawadu_M_S_Cobsccomp171p008" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="userProfileView" id="qAI-nC-mrN" customClass="userProfileView" customModule="Manawadu_M_S_Cobsccomp171p008" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yMn-qN-iA3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,6 +122,54 @@
             </objects>
             <point key="canvasLocation" x="346" y="-612"/>
         </scene>
+        <!--Touchand Face Authentication View Controller-->
+        <scene sceneID="rRG-En-5vx">
+            <objects>
+                <viewController id="1ai-c2-73w" customClass="TouchandFaceAuthenticationViewController" customModule="Manawadu_M_S_Cobsccomp171p008" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6DV-fL-ocn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Os-bs-rv3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBD-c6-lKK">
+                                        <rect key="frame" x="107" y="268" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="dKX-NN-pkG"/>
+                                            <constraint firstAttribute="width" constant="200" id="kvU-pX-2GA"/>
+                                        </constraints>
+                                        <state key="normal" image="touch"/>
+                                        <connections>
+                                            <action selector="doButtonAuthenticate:" destination="1ai-c2-73w" eventType="touchUpInside" id="1dM-Xd-Z0o"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="BBD-c6-lKK" firstAttribute="centerY" secondItem="7Os-bs-rv3" secondAttribute="centerY" id="4Xa-Cm-nwP"/>
+                                    <constraint firstItem="BBD-c6-lKK" firstAttribute="centerX" secondItem="7Os-bs-rv3" secondAttribute="centerX" id="oZf-rN-UyU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7Os-bs-rv3" firstAttribute="bottom" secondItem="BbR-Pg-0ze" secondAttribute="bottom" id="AsQ-vL-DvA"/>
+                            <constraint firstItem="7Os-bs-rv3" firstAttribute="top" secondItem="6DV-fL-ocn" secondAttribute="top" id="V3h-X8-DuZ"/>
+                            <constraint firstAttribute="trailing" secondItem="7Os-bs-rv3" secondAttribute="trailing" id="Z2C-sT-x7B"/>
+                            <constraint firstItem="7Os-bs-rv3" firstAttribute="leading" secondItem="6DV-fL-ocn" secondAttribute="leading" id="toQ-QE-IKj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BbR-Pg-0ze"/>
+                    </view>
+                    <connections>
+                        <outlet property="authenticateBtn" destination="BBD-c6-lKK" id="bp6-bP-ObI"/>
+                        <segue destination="yKe-9S-O05" kind="presentation" identifier="userProfileView" id="sba-4P-lDk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vIg-k9-H7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1697.1014492753625" y="-817.66304347826099"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="e0R-pY-VSz">
             <objects>
@@ -141,4 +189,7 @@
             <point key="canvasLocation" x="-786.95652173913049" y="-796.46739130434787"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="touch" width="512" height="512"/>
+    </resources>
 </document>

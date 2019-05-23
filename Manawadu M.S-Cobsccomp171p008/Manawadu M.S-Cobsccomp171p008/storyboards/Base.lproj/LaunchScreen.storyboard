@@ -29,8 +29,18 @@
                                             <constraint firstAttribute="height" constant="300" id="stI-CY-gqA"/>
                                         </constraints>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NIBMlogo" translatesAutoresizingMaskIntoConstraints="NO" id="kcS-nc-cit">
+                                        <rect key="frame" x="123.66666666666669" y="80" width="167" height="89"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="89" id="83g-JI-B1y"/>
+                                            <constraint firstAttribute="width" constant="167" id="uoY-hh-TYI"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2019. All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuV-9y-Mga">
-                                        <rect key="frame" x="37" y="704" width="340" height="24"/>
+                                        <rect key="frame" x="37" y="689" width="340" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="gt9-kY-bcF"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" red="1" green="0.96869110881159126" blue="0.98281482783694663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -41,13 +51,16 @@
                                     <constraint firstItem="Cbs-ho-g64" firstAttribute="top" secondItem="HQ2-Mu-nW2" secondAttribute="top" constant="218" id="AWq-UH-vhj"/>
                                     <constraint firstItem="Cbs-ho-g64" firstAttribute="centerX" secondItem="HQ2-Mu-nW2" secondAttribute="centerX" id="EVJ-qf-9wC"/>
                                     <constraint firstAttribute="trailing" secondItem="Cbs-ho-g64" secondAttribute="trailing" constant="57" id="EdZ-j8-e2b"/>
+                                    <constraint firstAttribute="bottom" secondItem="QuV-9y-Mga" secondAttribute="bottom" constant="23" id="FZ8-t0-xim"/>
                                     <constraint firstItem="Cbs-ho-g64" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="57" id="Q6N-Cv-DOC"/>
+                                    <constraint firstItem="kcS-nc-cit" firstAttribute="top" secondItem="HQ2-Mu-nW2" secondAttribute="top" constant="80" id="T7Z-kp-7uz"/>
                                     <constraint firstItem="Cbs-ho-g64" firstAttribute="centerY" secondItem="HQ2-Mu-nW2" secondAttribute="centerY" id="ajV-zZ-Xy9"/>
                                     <constraint firstAttribute="width" constant="414" id="b3J-Vd-oNj"/>
-                                    <constraint firstItem="QuV-9y-Mga" firstAttribute="bottom" secondItem="HQ2-Mu-nW2" secondAttribute="bottomMargin" id="cge-eY-ZYM"/>
+                                    <constraint firstItem="kcS-nc-cit" firstAttribute="centerX" secondItem="Cbs-ho-g64" secondAttribute="centerX" id="eGq-iE-siJ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QuV-9y-Mga" secondAttribute="trailing" constant="20" symbolic="YES" id="fVH-uR-ZCf"/>
                                     <constraint firstItem="Cbs-ho-g64" firstAttribute="centerY" secondItem="HQ2-Mu-nW2" secondAttribute="centerY" id="pOP-wv-L4K"/>
                                     <constraint firstAttribute="height" constant="736" id="ptV-pM-thz"/>
-                                    <constraint firstItem="QuV-9y-Mga" firstAttribute="centerX" secondItem="Cbs-ho-g64" secondAttribute="centerX" id="td5-ci-vSv"/>
+                                    <constraint firstItem="QuV-9y-Mga" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="37" id="xRp-ZK-9cv"/>
                                     <constraint firstItem="Cbs-ho-g64" firstAttribute="centerX" secondItem="HQ2-Mu-nW2" secondAttribute="centerX" id="xXL-Be-c28"/>
                                 </constraints>
                             </view>
@@ -68,6 +81,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NIBMlogo" width="300" height="172"/>
         <image name="launchLogo" width="800" height="800"/>
     </resources>
 </document>
