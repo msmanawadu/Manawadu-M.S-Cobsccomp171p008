@@ -8,20 +8,24 @@
 
 import UIKit
 
-class NotesViewController: UIViewController, UITableViewDataSource
+class NotesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
   {
     
     @IBOutlet weak var table: UITableView!
     
     var data: [String] = []
     var fileURL: URL!
-    
+    // reference for currently selected row
+    var selectedRow: Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    // Do any additional setup after loading the view.
+    // handling the data in the table
         table.dataSource = self
+        
+    // table row selection interactivity via the delegate
+        table.delegate = self
         
     // giving the UI title
         self.title = "Notes"
@@ -57,7 +61,8 @@ class NotesViewController: UIViewController, UITableViewDataSource
         data.insert(name, at:0)
         let indexPath: IndexPath = IndexPath(row: 0, section: 0)
         table.insertRows(at: [indexPath], with: .automatic)
-        save()
+        table.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+        self.performSegue(withIdentifier: "detail", sender: nil)
         
     }
     
@@ -85,9 +90,22 @@ class NotesViewController: UIViewController, UITableViewDataSource
         table.deleteRows(at: [indexPath], with: .fade)
         save()
     }
-
-    // save notes to a file rather on user defaults
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "detail", sender: nil)    }
+    
+    // prepare for notedetail ViewController to appear
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailView: NoteDetailViewController = segue.destination as! NoteDetailViewController
+        
+        selectedRow = table.indexPathForSelectedRow!.row
+        
+      //  detailView.masterView = self
+        
+        detailView.setText(t: data[selectedRow])
+    }
+    
+    // save notes to a file rather on user defaults
     func save() {
                   //UserDefaults.standard.set(data, forKey: "notes")
      let a = NSArray(array: data)

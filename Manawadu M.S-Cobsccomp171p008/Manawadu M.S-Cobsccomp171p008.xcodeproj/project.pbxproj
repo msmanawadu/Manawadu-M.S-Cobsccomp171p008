@@ -16,6 +16,7 @@
 		3853412D2290625100869B1D /* addStudentDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853412C2290625100869B1D /* addStudentDataViewController.swift */; };
 		38BB7AF9229646EE000E8DD4 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BB7AF8229646EE000E8DD4 /* Notes.storyboard */; };
 		38BB7AFB22964AC6000E8DD4 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BB7AFA22964AC6000E8DD4 /* NotesViewController.swift */; };
+		38BB7AFD22966C10000E8DD4 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BB7AFC22966C10000E8DD4 /* NoteDetailViewController.swift */; };
 		38E638BD228ED5DD00DF63E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E638BC228ED5DD00DF63E1 /* AppDelegate.swift */; };
 		38E638BF228ED5DD00DF63E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E638BE228ED5DD00DF63E1 /* ViewController.swift */; };
 		38E638C2228ED5DD00DF63E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E638C0228ED5DD00DF63E1 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		3853412C2290625100869B1D /* addStudentDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addStudentDataViewController.swift; sourceTree = "<group>"; };
 		38BB7AF8229646EE000E8DD4 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		38BB7AFA22964AC6000E8DD4 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		38BB7AFC22966C10000E8DD4 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 		38E638B9228ED5DD00DF63E1 /* Manawadu M.S-Cobsccomp171p008.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Manawadu M.S-Cobsccomp171p008.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E638BC228ED5DD00DF63E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38E638BE228ED5DD00DF63E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				380C969A2291E07100397D17 /* viewUserDetailsViewController.swift */,
 				380C96A22291EE9700397D17 /* userProfileView.swift */,
 				38BB7AFA22964AC6000E8DD4 /* NotesViewController.swift */,
+				38BB7AFC22966C10000E8DD4 /* NoteDetailViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			files = (
 				380C969B2291E07100397D17 /* viewUserDetailsViewController.swift in Sources */,
 				38ED9559228FC6F200FF424D /* HomeTableViewCell.swift in Sources */,
+				38BB7AFD22966C10000E8DD4 /* NoteDetailViewController.swift in Sources */,
 				38ED9551228EF3F900FF424D /* LoginViewController.swift in Sources */,
 				38E638BF228ED5DD00DF63E1 /* ViewController.swift in Sources */,
 				38ED9555228EFAA500FF424D /* AppTempData.swift in Sources */,

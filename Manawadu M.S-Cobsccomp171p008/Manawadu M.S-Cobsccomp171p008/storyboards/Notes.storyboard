@@ -56,11 +56,57 @@
                     </view>
                     <connections>
                         <outlet property="table" destination="prs-py-viM" id="KGW-3b-09G"/>
+                        <segue destination="dvU-eP-Qm4" kind="show" identifier="detail" id="i3I-mo-OlP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKe-sJ-zGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="37.681159420289859" y="5.7065217391304355"/>
+        </scene>
+        <!--Note-->
+        <scene sceneID="xY6-yS-lmR">
+            <objects>
+                <viewController title="Note" id="dvU-eP-Qm4" customClass="NoteDetailViewController" customModule="Manawadu_M_S_Cobsccomp171p008" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fib-MQ-Ih4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGj-EH-FM3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zr7-TQ-WMM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zr7-TQ-WMM" firstAttribute="top" secondItem="ZGj-EH-FM3" secondAttribute="top" id="3Ma-ea-pMB"/>
+                                    <constraint firstItem="zr7-TQ-WMM" firstAttribute="leading" secondItem="ZGj-EH-FM3" secondAttribute="leading" id="tms-38-Ql6"/>
+                                    <constraint firstAttribute="trailing" secondItem="zr7-TQ-WMM" secondAttribute="trailing" id="wuZ-GP-akA"/>
+                                    <constraint firstAttribute="bottom" secondItem="zr7-TQ-WMM" secondAttribute="bottom" id="ytl-Hv-3tD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZGj-EH-FM3" firstAttribute="leading" secondItem="fib-MQ-Ih4" secondAttribute="leading" id="6rK-Cq-FUS"/>
+                            <constraint firstAttribute="trailing" secondItem="ZGj-EH-FM3" secondAttribute="trailing" id="KNd-he-fJC"/>
+                            <constraint firstItem="ZGj-EH-FM3" firstAttribute="top" secondItem="fib-MQ-Ih4" secondAttribute="top" id="M2J-2I-Wap"/>
+                            <constraint firstAttribute="bottom" secondItem="ZGj-EH-FM3" secondAttribute="bottom" id="PbR-mr-66V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eOi-UF-9Er"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="zr7-TQ-WMM" id="5hh-2E-CG2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3U-lh-b8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.75362318840587" y="5.7065217391304355"/>
         </scene>
     </scenes>
 </document>
