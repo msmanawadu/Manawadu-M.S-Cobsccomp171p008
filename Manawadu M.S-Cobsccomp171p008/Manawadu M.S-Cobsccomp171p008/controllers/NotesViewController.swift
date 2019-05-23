@@ -17,6 +17,8 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     var fileURL: URL!
     // reference for currently selected row
     var selectedRow: Int = -1
+    // store the text at detail ViewController
+    var newRowText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,8 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     // large title
     self.navigationController?.navigationBar.prefersLargeTitles = true
+    // always display in large title
+    self.navigationItem.largeTitleDisplayMode = .always
         
     // "+" nav bar button to add new notes
     let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNote))
@@ -51,13 +55,30 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         load()
     }
     
+    // calling again
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if selectedRow == -1 {
+            return
+        }
+        data[selectedRow] = newRowText
+        if newRowText == "" {
+            data.remove(at: selectedRow)
+        }
+        table.reloadData()
+        save()
+    }
+    
+    
+    
+    
         // To add new notes
     @objc func addNote() {
         // to avoid adding new rows on edit
         if table.isEditing {
             return
         }
-        let name: String = "Note \(data.count + 1)"
+        let name: String = ""
         data.insert(name, at:0)
         let indexPath: IndexPath = IndexPath(row: 0, section: 0)
         table.insertRows(at: [indexPath], with: .automatic)
@@ -97,11 +118,10 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     // prepare for notedetail ViewController to appear
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailView: NoteDetailViewController = segue.destination as! NoteDetailViewController
-        
         selectedRow = table.indexPathForSelectedRow!.row
-        
-      //  detailView.masterView = self
-        
+        // set up masterView property
+        detailView.masterView = self
+        //  detailView.masterView = self
         detailView.setText(t: data[selectedRow])
     }
     

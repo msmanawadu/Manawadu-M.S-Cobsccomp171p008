@@ -13,12 +13,26 @@ class NoteDetailViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     
-    // captures user input text
+    // to capture user input text
     var text: String = ""
+    // create a property of master VC reference
+    var masterView: NotesViewController!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.text = text
+        
+        // set small title for Note
+        self.navigationItem.largeTitleDisplayMode = .never
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // to automatically display the phone keypad
+        textView.becomeFirstResponder()
     }
     
     // setting text from master ViewController
@@ -31,6 +45,13 @@ class NoteDetailViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        masterView.newRowText = textView.text
+        
+        // to hold the keypad
+        textView.resignFirstResponder()
+    }
     
 
     /*
