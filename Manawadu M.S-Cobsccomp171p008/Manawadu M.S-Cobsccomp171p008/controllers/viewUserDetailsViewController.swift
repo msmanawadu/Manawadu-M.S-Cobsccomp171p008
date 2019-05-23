@@ -34,6 +34,7 @@ class viewUserDetailsViewController: UIViewController {
         labelCity.text = studentDetails.city
         labelPhoneNumber.text = String(studentDetails.phoneNumber!)
         labelFBProfileURL.text = studentDetails.fbProfileURL
+     
         }
     
     

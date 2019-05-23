@@ -28,6 +28,9 @@ class TouchandFaceAuthenticationViewController: UIViewController {
                 
             }
         }
+        
+        // giving the UI title
+        self.title = "My Profile"
     }
     
     

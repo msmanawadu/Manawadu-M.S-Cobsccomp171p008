@@ -34,6 +34,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     // large title
     self.navigationController?.navigationBar.prefersLargeTitles = true
+        
     // always display in large title
     self.navigationItem.largeTitleDisplayMode = .always
         

@@ -36,10 +36,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
+        // giving the UI title
+        self.title = "Home"
         
-        
-
-        // Do any additional setup after loading the view.
     }
     
     // cell registration
