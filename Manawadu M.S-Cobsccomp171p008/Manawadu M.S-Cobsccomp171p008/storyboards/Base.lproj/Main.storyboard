@@ -20,7 +20,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBD-36-j1G">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" red="0.76947611051092091" green="1" blue="0.36110239035041969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainstoryboardbackgrond" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-4D-Xco">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="736" id="HFf-UN-YAN"/>
+                                            <constraint firstAttribute="width" constant="414" id="M9e-Ov-Ey7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ah2-4D-Xco" secondAttribute="bottom" id="4DO-km-jMi"/>
+                                    <constraint firstItem="ah2-4D-Xco" firstAttribute="leading" secondItem="nBD-36-j1G" secondAttribute="leading" id="Vfe-fi-0ML"/>
+                                    <constraint firstItem="ah2-4D-Xco" firstAttribute="top" secondItem="nBD-36-j1G" secondAttribute="top" id="Z0R-eW-dG7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ah2-4D-Xco" secondAttribute="trailing" id="zxb-Vt-neK"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,7 +69,10 @@
                 <viewControllerPlaceholder storyboardName="Home" id="l8V-6H-kEa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhf-fd-I4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="14"/>
+            <point key="canvasLocation" x="649" y="348"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mainstoryboardbackgrond" width="1040" height="1526"/>
+    </resources>
 </document>
