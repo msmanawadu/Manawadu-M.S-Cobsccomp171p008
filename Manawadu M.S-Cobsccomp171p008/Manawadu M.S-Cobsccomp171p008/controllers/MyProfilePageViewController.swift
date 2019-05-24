@@ -60,15 +60,45 @@ class MyProfilePageViewController: UIViewController {
 //
 //        // Testing the passed values in the console
 //        print(firstName, lastName, fbProfileURL, phoneNo, cityOf)
-   }
+    
+    // Hide the SW keyboard
+    self.tfFirstName.resignFirstResponder()
+    self.tfLastName.resignFirstResponder()
+    self.tfAge.resignFirstResponder()
+    self.tfBirthday.resignFirstResponder()
+    self.tfPhoneNumber.resignFirstResponder()
+    self.tfEmail.resignFirstResponder()
+    self.tfPassword.resignFirstResponder()
+    }
+    
+    //Hide the SW keyboard when the user touch anywhere else
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     
     @IBAction func doBtnAddImage(_ sender: UIButton) {
-    }
+        
+        // Hide the SW keyboard
+        self.tfFirstName.resignFirstResponder()
+        self.tfLastName.resignFirstResponder()
+        self.tfAge.resignFirstResponder()
+        self.tfBirthday.resignFirstResponder()
+        self.tfPhoneNumber.resignFirstResponder()
+        self.tfEmail.resignFirstResponder()
+        self.tfPassword.resignFirstResponder()    }
     
     
     @IBAction func doBtnClear(_ sender: UIButton) {
-    }
+        
+        // Hide the SW keyboard
+        self.tfFirstName.resignFirstResponder()
+        self.tfLastName.resignFirstResponder()
+        self.tfAge.resignFirstResponder()
+        self.tfBirthday.resignFirstResponder()
+        self.tfPhoneNumber.resignFirstResponder()
+        self.tfEmail.resignFirstResponder()
+        self.tfPassword.resignFirstResponder()    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

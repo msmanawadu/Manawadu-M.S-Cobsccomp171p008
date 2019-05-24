@@ -38,12 +38,23 @@ class ForgotPasswordViewController: UIViewController {
                 }
             }
         }
+   
+    // Hide the SW keyboard
+    self.tfForgotPassword.resignFirstResponder()
+    }
+    
+    //Hide the SW keyboard when the user touch anywhere else
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     
     @IBAction func doBtnCancel(_ sender: UIButton) {
         
         self.dismiss(animated: true, completion: nil)
+        
+        // Hide the SW keyboard
+        self.tfForgotPassword.resignFirstResponder()
     }
     
     
