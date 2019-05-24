@@ -48,6 +48,12 @@ class addStudentDataViewController: UIViewController {
     @IBOutlet weak var cancelBtn: UIButton!
     
     @IBAction func doBtnAddPhoto(_ sender: UIButton) {
+        //Hide the SW keyboard
+        self.fName.resignFirstResponder()
+        self.lName.resignFirstResponder()
+        self.phoneNumber.resignFirstResponder()
+        self.city.resignFirstResponder()
+        self.FbProfileURL.resignFirstResponder()
     }
     
     @IBAction func doBtnSave(_ sender: UIButton) {
@@ -79,6 +85,13 @@ class addStudentDataViewController: UIViewController {
     
     
     @IBAction func doBtnCancel(_ sender: UIButton) {
+        //Hide the SW keyboard
+        self.fName.resignFirstResponder()
+        self.lName.resignFirstResponder()
+        self.phoneNumber.resignFirstResponder()
+        self.city.resignFirstResponder()
+        self.FbProfileURL.resignFirstResponder()
+        
     }
     
     override func viewDidLoad() {

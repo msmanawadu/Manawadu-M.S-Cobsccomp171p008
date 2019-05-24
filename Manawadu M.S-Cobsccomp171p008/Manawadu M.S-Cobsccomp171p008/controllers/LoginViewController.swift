@@ -18,12 +18,14 @@ class LoginViewController: UIViewController,  GIDSignInDelegate, GIDSignInUIDele
         super.viewDidLoad()
         
         
-        // BUTTON BORDER
-        self.doBtnLogin.layer.borderWidth = 1.0
+        // Login button style
+      self.doBtnLogin.layer.cornerRadius = self.doBtnLogin.bounds.height / 8
         
-        // BUTTON CORNER ROUND
-        self.doBtnLogin.layer.cornerRadius = self.doBtnLogin.bounds.height / 2
+        // Register button style
+      self.doBtnSignUp.layer.cornerRadius = self.doBtnSignUp.bounds.height / 8
         
+        // topLogo style
+        self.topLogo.layer.cornerRadius = self.topLogo.bounds.height / 8
         
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance()?.delegate = self
@@ -32,6 +34,9 @@ class LoginViewController: UIViewController,  GIDSignInDelegate, GIDSignInUIDele
     }
     
     // references to the UI elements
+    
+    
+    @IBOutlet weak var topLogo: UIImageView!
     
     @IBOutlet weak var tfEmail: UITextField!
     
@@ -62,8 +67,17 @@ class LoginViewController: UIViewController,  GIDSignInDelegate, GIDSignInUIDele
             }
         }
         
+   //Hide the SW keyboard
+     self.tfEmail.resignFirstResponder()
+     self.tfPassword.resignFirstResponder()
     }
-    // S
+    
+    //Hide the SW keyboard when the user touch anywhere else
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    // Signp / Register
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         // ...
         if let error = error {
@@ -73,8 +87,7 @@ class LoginViewController: UIViewController,  GIDSignInDelegate, GIDSignInUIDele
         
         guard let authentication = user.authentication else { return }
         
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,accessToken: authentication.accessToken)
         
         Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
             if let error = error {
@@ -97,12 +110,15 @@ class LoginViewController: UIViewController,  GIDSignInDelegate, GIDSignInUIDele
     }
     
     @IBAction func doBtnForgotPassword(_ sender: UIButton) {
+        //Hide the SW keyboard
+        self.tfEmail.resignFirstResponder()
+        self.tfPassword.resignFirstResponder()
     }
     
     @IBAction func doBtnSignUp(_ sender: UIButton) {
-        
-        
-        
+        //Hide the SW keyboard
+        self.tfEmail.resignFirstResponder()
+        self.tfPassword.resignFirstResponder()
     }
     
     
