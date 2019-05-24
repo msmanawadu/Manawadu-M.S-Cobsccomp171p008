@@ -12,11 +12,11 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
   {
     
     @IBOutlet weak var table: UITableView!
-    
     var data: [String] = []
-    var fileURL: URL!
+    
     // reference for currently selected row
     var selectedRow: Int = -1
+    
     // store the text at detail ViewController
     var newRowText: String = ""
     
@@ -45,13 +45,6 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     // note editing button on nav bar
         self.navigationItem.leftBarButtonItem = editButtonItem
     
-    // file URL
-     let baseURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        
-    // saving notes on device persistant storage
-        fileURL = baseURL.appendingPathComponent("notes.txt")
-        
-        
     // loading the notes when app launches
         load()
     }
@@ -70,19 +63,19 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         save()
     }
     
-    
-    
-    
         // To add new notes
     @objc func addNote() {
+        
         // to avoid adding new rows on edit
         if table.isEditing {
             return
         }
+        
         let name: String = ""
         data.insert(name, at:0)
         let indexPath: IndexPath = IndexPath(row: 0, section: 0)
         table.insertRows(at: [indexPath], with: .automatic)
+        save()
         table.selectRow(at: indexPath, animated: true, scrollPosition: .none)
         self.performSegue(withIdentifier: "detail", sender: nil)
         
@@ -126,36 +119,15 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         detailView.setText(t: data[selectedRow])
     }
     
-    // save notes to a file rather on user defaults
+    // save notes to persistent storage using user defaults
     func save() {
-                  //UserDefaults.standard.set(data, forKey: "notes")
-     let a = NSArray(array: data)
-        
-        // error handling if writing to file fails
-        do {
-            try a.write(to: fileURL)
-        } catch {
-            print("error writing file")
-        }
-    }
+         UserDefaults.standard.set(data, forKey: "notes")
+       }
     
     func load() {
-        if let loadedData: [String] = NSArray(contentsOf: fileURL) as? [String] {
+        if let loadedData: [String] = UserDefaults.standard.value(forKey: "notes") as? [String] {
             data = loadedData
             table.reloadData()
         }
     }
-
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

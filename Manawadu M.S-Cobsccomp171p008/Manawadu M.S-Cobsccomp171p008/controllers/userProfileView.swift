@@ -11,7 +11,6 @@ import Firebase
 import FirebaseAuth
 import Kingfisher
 
-
 class userProfileView: UIViewController {
     
     
@@ -23,39 +22,19 @@ class userProfileView: UIViewController {
     let bDay: String = ""
     
     
-    
-    
     @IBOutlet weak var profileImageView: UIImageView!
-    
-    
     @IBOutlet weak var labelFirstName: UILabel!
-    
-    
     @IBOutlet weak var labelLastName: UILabel!
-    
-    
+    @IBOutlet weak var labelBirthdate: UILabel!
+    @IBOutlet weak var labelAge: UILabel!
     @IBOutlet weak var labelPhoneNumber: UILabel!
     
-    
-    @IBOutlet weak var labelFBProfileURL: UILabel!
-    
-    
-    @IBOutlet weak var labelCity: UILabel!
-    
-    
     var ref: DatabaseReference!
-    
-   
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         getUserData()
@@ -71,45 +50,16 @@ class userProfileView: UIViewController {
             
             if let userprof = DataSnapshot.value as? [String : AnyObject]{
                 self.labelFirstName.text! = userprof["fName"] as! String
-                self.labelFirstName.text! = userprof["lName"] as! String
+                self.labelLastName.text! = userprof["lName"] as! String
+                self.labelBirthdate.text! = userprof["birthDay"] as! String
+                
+                self.labelAge.text! = String(userprof["age"] as! Int)
+                
                 self.labelPhoneNumber.text! = String(userprof["phoneNumber"] as! Int)
-                
-                
-                
-                
-                
-                
                 
                 let imgURL = URL(string: userprof["profImag"] as! String)
               self.profileImageView.kf.setImage(with: imgURL)
             }
-            
         }, withCancel: nil)
-//        ref.child("user/profile/").child(userId!).observeSingleEvent(of: .value, with: { (snapshot) in
-
-           // print(snapshot)
-
-//            // Get user value
-//            let value = snapshot.value as? NSDictionary
-//            let username = value?["username"] as? String ?? ""
-//            let user = User(username: username)
-
-//            // ...
-//        }) { (error) in
-//            print(error.localizedDescription)
-//        }
-        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
