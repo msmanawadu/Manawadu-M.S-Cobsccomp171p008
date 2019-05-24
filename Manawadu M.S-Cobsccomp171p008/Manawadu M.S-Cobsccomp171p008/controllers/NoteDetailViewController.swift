@@ -15,6 +15,7 @@ class NoteDetailViewController: UIViewController {
     
     // to capture user input text
     var text: String = ""
+    
     // create a property of master VC reference
     var masterView: NotesViewController!
     

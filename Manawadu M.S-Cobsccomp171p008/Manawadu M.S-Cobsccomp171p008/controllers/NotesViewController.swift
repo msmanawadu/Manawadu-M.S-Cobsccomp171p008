@@ -75,7 +75,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         data.insert(name, at:0)
         let indexPath: IndexPath = IndexPath(row: 0, section: 0)
         table.insertRows(at: [indexPath], with: .automatic)
-        save()
+        
         table.selectRow(at: indexPath, animated: true, scrollPosition: .none)
         self.performSegue(withIdentifier: "detail", sender: nil)
         
@@ -99,7 +99,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         table.setEditing(editing, animated: animated)
     }
     
-    // editing the cell content
+    // editing the cell content - deleting a note thread
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         data.remove(at: indexPath.row)
         table.deleteRows(at: [indexPath], with: .fade)
@@ -109,13 +109,14 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "detail", sender: nil)    }
     
-    // prepare for notedetail ViewController to appear
+    // prepare for note detail ViewController to appear
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailView: NoteDetailViewController = segue.destination as! NoteDetailViewController
         selectedRow = table.indexPathForSelectedRow!.row
+        
         // set up masterView property
         detailView.masterView = self
-        //  detailView.masterView = self
+        
         detailView.setText(t: data[selectedRow])
     }
     
