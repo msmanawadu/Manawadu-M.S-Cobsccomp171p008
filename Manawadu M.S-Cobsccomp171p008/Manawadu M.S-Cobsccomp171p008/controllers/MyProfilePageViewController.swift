@@ -91,6 +91,8 @@ class MyProfilePageViewController: UIViewController {
     
     @IBAction func doBtnClear(_ sender: UIButton) {
         
+         self.dismiss(animated: true, completion: nil)
+        
         // Hide the SW keyboard
         self.tfFirstName.resignFirstResponder()
         self.tfLastName.resignFirstResponder()
