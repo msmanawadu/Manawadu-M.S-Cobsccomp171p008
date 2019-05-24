@@ -47,8 +47,6 @@ class addStudentDataViewController: UIViewController {
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
     
-    
-    
     @IBAction func doBtnAddPhoto(_ sender: UIButton) {
     }
     
@@ -65,7 +63,20 @@ class addStudentDataViewController: UIViewController {
         // Testing the passed values in the console
         print(firstName, lastName, fbProfileURL, phoneNo, cityOf)
         
+        //Hide the SW keyboard
+        self.fName.resignFirstResponder()
+        self.lName.resignFirstResponder()
+        self.phoneNumber.resignFirstResponder()
+        self.city.resignFirstResponder()
+        self.FbProfileURL.resignFirstResponder()
+        
     }
+    
+    //Hide the SW keyboard when the user touch anywhere else
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     
     @IBAction func doBtnCancel(_ sender: UIButton) {
     }
@@ -74,28 +85,22 @@ class addStudentDataViewController: UIViewController {
         super.viewDidLoad()
         
         //cancelBtn
-        
         cancelBtn.layer.borderWidth = 1.0
-        cancelBtn.layer.borderColor = UIColor.red.cgColor
+        cancelBtn.layer.borderColor = #colorLiteral(red: 1, green: 0.07474343349, blue: 0, alpha: 1)
         cancelBtn.layer.cornerRadius = cancelBtn.bounds.height / 2
 
-        // BUTTON BORDER
+        // saveBtn
         self.saveBtn.layer.borderWidth = 1.0
-        
-        // BUTTON CORNER ROUND - saveBtn
+        self.saveBtn.layer.borderColor = #colorLiteral(red: 0, green: 0.07706925133, blue: 1, alpha: 1)
         self.saveBtn.layer.cornerRadius = self.saveBtn.bounds.height / 2
-
-        // Do any additional setup after loading the view.
         
         // image Picker modification
-        
         imgPick = UIImagePickerController()
         imgPick.allowsEditing = true
         imgPick.sourceType = .photoLibrary
         imgPick.delegate = self
         
         // imageView configuration
-        
         let imgTap = UITapGestureRecognizer(target: self, action: #selector(openImgPick))
         profileImage.isUserInteractionEnabled = true
         profileImage.addGestureRecognizer(imgTap)

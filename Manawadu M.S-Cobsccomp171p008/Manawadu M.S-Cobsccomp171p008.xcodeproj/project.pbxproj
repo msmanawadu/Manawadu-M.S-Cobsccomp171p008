@@ -95,6 +95,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		38AE8354229791B6001C7A82 /* Home Table View */ = {
+			isa = PBXGroup;
+			children = (
+				38ED9558228FC6F200FF424D /* HomeTableViewCell.swift */,
+			);
+			path = "Home Table View";
+			sourceTree = "<group>";
+		};
 		38E638B0228ED5DD00DF63E1 = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +132,7 @@
 				38E638BC228ED5DD00DF63E1 /* AppDelegate.swift */,
 				38E638C3228ED5DE00DF63E1 /* Assets.xcassets */,
 				38E638C8228ED5DE00DF63E1 /* Info.plist */,
-				38ED9558228FC6F200FF424D /* HomeTableViewCell.swift */,
+				38AE8354229791B6001C7A82 /* Home Table View */,
 			);
 			path = "Manawadu M.S-Cobsccomp171p008";
 			sourceTree = "<group>";

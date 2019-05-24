@@ -12,17 +12,14 @@ class HomeTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var profileImageView: UIImageView!
-    
-    
     @IBOutlet weak var name: UILabel!
-    
     @IBOutlet weak var city: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // BUTTON CORNER ROUND
-        self.profileImageView.layer.cornerRadius = self.profileImageView.bounds.height / 2
+        // ImageView round edges
+        self.profileImageView.layer.cornerRadius = self.profileImageView.bounds.height / 8
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
