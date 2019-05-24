@@ -35,7 +35,8 @@ class viewUserDetailsViewController: UIViewController {
         labelPhoneNumber.text = String(studentDetails.phoneNumber!)
         labelFBProfileURL.text = studentDetails.fbProfileURL
      
-        }
+        // ImageView round edges
+        self.profileImageView.layer.cornerRadius = self.profileImageView.bounds.height / 8        }
     
     
     /*

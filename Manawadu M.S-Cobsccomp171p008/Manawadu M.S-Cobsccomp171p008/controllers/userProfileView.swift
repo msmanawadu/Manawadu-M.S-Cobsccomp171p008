@@ -38,6 +38,10 @@ class userProfileView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getUserData()
+        
+        
+        // ImageView round edges
+        self.profileImageView.layer.cornerRadius = self.profileImageView.bounds.height / 8
 
         // Do any additional setup after loading the view.
     }
