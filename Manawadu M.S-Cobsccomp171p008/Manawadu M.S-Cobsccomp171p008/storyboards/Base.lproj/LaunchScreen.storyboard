@@ -24,54 +24,49 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Cbs-ho-g64">
                                         <rect key="frame" x="57" y="218" width="300" height="300"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2019. All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuV-9y-Mga">
-                                        <rect key="frame" x="37" y="689" width="340" height="24"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="7Q5-Et-SQj"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <color key="textColor" red="1" green="0.96869110881159126" blue="0.98281482783694663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-coventry" translatesAutoresizingMaskIntoConstraints="NO" id="38x-Al-QzY">
-                                        <rect key="frame" x="202" y="555" width="175" height="114"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="175" id="FX2-Eq-fHb"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="b6N-9L-lzz"/>
-                                            <constraint firstAttribute="height" constant="114" id="wKL-ic-ESW"/>
+                                            <constraint firstAttribute="height" constant="300" id="aF0-xT-cu9"/>
+                                            <constraint firstAttribute="width" secondItem="Cbs-ho-g64" secondAttribute="height" multiplier="1:1" id="onS-Op-Qns"/>
+                                            <constraint firstAttribute="width" constant="300" id="pVm-QO-azC"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NIBMlogo" translatesAutoresizingMaskIntoConstraints="NO" id="kcS-nc-cit">
-                                        <rect key="frame" x="124" y="65" width="166" height="98"/>
+                                        <rect key="frame" x="105" y="58" width="204" height="113"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="166" id="E1k-Fk-8ms"/>
-                                            <constraint firstAttribute="height" constant="98" id="cZ9-9c-OlB"/>
+                                            <constraint firstAttribute="width" constant="204" id="efn-tK-wkr"/>
+                                            <constraint firstAttribute="width" secondItem="kcS-nc-cit" secondAttribute="height" multiplier="204:113" id="kKn-BH-g23"/>
+                                            <constraint firstAttribute="height" constant="113" id="ll0-pj-NpG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-coventry" translatesAutoresizingMaskIntoConstraints="NO" id="38x-Al-QzY">
+                                        <rect key="frame" x="122" y="549" width="170" height="124"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="ROx-Na-SYu"/>
+                                            <constraint firstAttribute="height" constant="124" id="diE-EZ-bRF"/>
+                                            <constraint firstAttribute="width" secondItem="38x-Al-QzY" secondAttribute="height" multiplier="85:62" id="pej-dX-D3S"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.19505518674850464" green="0.65375173091888428" blue="0.98985236883163452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="kcS-nc-cit" firstAttribute="top" secondItem="HQ2-Mu-nW2" secondAttribute="top" constant="65" id="BXk-gF-XoU"/>
-                                    <constraint firstItem="QuV-9y-Mga" firstAttribute="top" secondItem="38x-Al-QzY" secondAttribute="bottom" constant="20" id="Cgo-px-Adi"/>
-                                    <constraint firstAttribute="bottom" secondItem="QuV-9y-Mga" secondAttribute="bottom" constant="23" id="Jef-Cy-3Vz"/>
-                                    <constraint firstItem="38x-Al-QzY" firstAttribute="top" secondItem="Cbs-ho-g64" secondAttribute="bottom" constant="37" id="MAz-Fw-2vU"/>
-                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="top" secondItem="kcS-nc-cit" secondAttribute="bottom" constant="55" id="aTI-oT-L9o"/>
-                                    <constraint firstItem="38x-Al-QzY" firstAttribute="trailing" secondItem="QuV-9y-Mga" secondAttribute="trailing" id="bBv-QA-Vmk"/>
-                                    <constraint firstItem="kcS-nc-cit" firstAttribute="centerX" secondItem="HQ2-Mu-nW2" secondAttribute="centerX" id="bN6-fv-Xof"/>
-                                    <constraint firstItem="kcS-nc-cit" firstAttribute="centerX" secondItem="Cbs-ho-g64" secondAttribute="centerX" id="dSS-KR-0VK"/>
-                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="57" id="fMi-F0-joH"/>
-                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="centerX" secondItem="QuV-9y-Mga" secondAttribute="centerX" id="gw0-Io-qKA"/>
-                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="centerY" secondItem="HQ2-Mu-nW2" secondAttribute="centerY" id="pLp-7c-Q4q"/>
+                                    <constraint firstItem="38x-Al-QzY" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="122" id="GQE-Qf-7UG"/>
+                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="57" id="Wqc-4y-TTW"/>
+                                    <constraint firstItem="kcS-nc-cit" firstAttribute="leading" secondItem="HQ2-Mu-nW2" secondAttribute="leading" constant="105" id="l3O-OA-SVn"/>
+                                    <constraint firstItem="kcS-nc-cit" firstAttribute="top" secondItem="HQ2-Mu-nW2" secondAttribute="top" constant="58" id="rZe-1p-agJ"/>
+                                    <constraint firstItem="Cbs-ho-g64" firstAttribute="top" secondItem="HQ2-Mu-nW2" secondAttribute="top" constant="218" id="rvs-aR-pAe"/>
+                                    <constraint firstAttribute="trailing" secondItem="38x-Al-QzY" secondAttribute="trailing" constant="122" id="vAY-Xz-KtQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cbs-ho-g64" secondAttribute="trailing" constant="57" id="vti-66-Z5D"/>
+                                    <constraint firstAttribute="trailing" secondItem="kcS-nc-cit" secondAttribute="trailing" constant="105" id="wtz-7M-uTu"/>
+                                    <constraint firstItem="38x-Al-QzY" firstAttribute="top" secondItem="Cbs-ho-g64" secondAttribute="bottom" constant="31" id="zOq-k3-D1d"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="HQ2-Mu-nW2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5Wg-wy-4sG"/>
-                            <constraint firstItem="HQ2-Mu-nW2" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="P4V-bp-D83"/>
-                            <constraint firstItem="HQ2-Mu-nW2" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="SHV-Rj-hKW"/>
-                            <constraint firstAttribute="trailing" secondItem="HQ2-Mu-nW2" secondAttribute="trailing" id="yw1-Dt-Qzv"/>
+                            <constraint firstAttribute="bottom" secondItem="HQ2-Mu-nW2" secondAttribute="bottom" id="7kh-cg-eGd"/>
+                            <constraint firstItem="HQ2-Mu-nW2" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="7nF-DG-kTt"/>
+                            <constraint firstItem="HQ2-Mu-nW2" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="GUE-LU-UKX"/>
+                            <constraint firstAttribute="trailing" secondItem="HQ2-Mu-nW2" secondAttribute="trailing" id="x32-je-LOX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
