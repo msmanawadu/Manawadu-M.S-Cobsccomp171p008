@@ -38,7 +38,6 @@ class addStudentDataViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var doBtnAddPhoto: UIButton!
-    
     @IBOutlet weak var fName: UITextField!
     @IBOutlet weak var lName: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!

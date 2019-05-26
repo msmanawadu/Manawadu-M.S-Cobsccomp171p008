@@ -14,10 +14,6 @@ import Kingfisher
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    
-    
-    
-    
     @IBOutlet weak var tableView: UITableView!
     
     var student:[Student] = []
@@ -51,10 +47,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 func getStudentListData(){
         self.ref.child("StudentData/Students").observeSingleEvent(of: .value, with:{(snapshot) in
             
-             //debugging
-     
-           // print(snapshot)
-     
             var newstudent: [Student] = []
      
             if snapshot.childrenCount > 0 {
@@ -81,9 +73,6 @@ func getStudentListData(){
         
         
     }
-    
-    
-    
     
     @IBAction func doBtnSignOut(_ sender: UIBarButtonItem) {
         
@@ -112,8 +101,6 @@ func getStudentListData(){
         studentCell.profileImageView.kf.setImage(with: imgURL)
         studentCell.name.text = self.student[indexPath.row].fName + " " + self.student[indexPath.row].lName
         studentCell.city.text = self.student[indexPath.row].city
-        
-    
         return studentCell
         
     }
@@ -135,21 +122,5 @@ func getStudentListData(){
         self.performSegue(withIdentifier: "showData", sender: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
     
 }

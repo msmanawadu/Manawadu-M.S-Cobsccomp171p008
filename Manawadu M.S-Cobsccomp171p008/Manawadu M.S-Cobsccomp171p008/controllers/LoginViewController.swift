@@ -17,7 +17,6 @@ class LoginViewController: UIViewController,  GIDSignInDelegate, GIDSignInUIDele
         
         super.viewDidLoad()
         
-        
         // Login button style
       self.doBtnLogin.layer.cornerRadius = self.doBtnLogin.bounds.height / 8
         
@@ -37,18 +36,11 @@ class LoginViewController: UIViewController,  GIDSignInDelegate, GIDSignInUIDele
     
     
     @IBOutlet weak var topLogo: UIImageView!
-    
     @IBOutlet weak var tfEmail: UITextField!
-    
     @IBOutlet weak var tfPassword: UITextField!
-    
     @IBOutlet weak var doBtnLogin: UIButton!
-    
     @IBOutlet weak var doBtnForgotPassword: UIButton!
-    
     @IBOutlet weak var doBtnSignUp: UIButton!
-    
-    
     @IBAction func doBtnLogin(_ sender: UIButton) {
         
         Auth.auth().signIn(withEmail: self.tfEmail.text!, password: self.tfPassword.text!) { [weak self] user, error in
@@ -121,16 +113,4 @@ class LoginViewController: UIViewController,  GIDSignInDelegate, GIDSignInUIDele
         self.tfPassword.resignFirstResponder()
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -19,8 +19,6 @@ class NoteDetailViewController: UIViewController {
     // create a property of master VC reference
     var masterView: NotesViewController!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.text = text
@@ -54,15 +52,4 @@ class NoteDetailViewController: UIViewController {
         textView.resignFirstResponder()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

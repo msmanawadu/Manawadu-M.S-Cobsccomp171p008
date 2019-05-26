@@ -119,9 +119,6 @@ class MyProfilePageViewController: UIViewController {
         profilePicView.addGestureRecognizer(imgTap)
         
             BtnAddImage.addTarget(self, action: #selector(openImgPick), for: .touchUpInside)
-        
-        
-
         // Do any additional setup after loading the view.
     }
     
@@ -138,7 +135,7 @@ class MyProfilePageViewController: UIViewController {
 
         let storageReference = Storage.storage().reference()
 
-//        // Data in memory
+     // Data in memory
 
         guard let data = self.profilePicView.image!.jpegData(compressionQuality: 0.75) else {return}
         let image: UIImage = self.profilePicView.image!
@@ -233,18 +230,12 @@ class MyProfilePageViewController: UIViewController {
             }
         }
             
-            
-            
-            
-            
         }
         
 }
     
-    
-    
-    
 }
+    // image view appear setup
 
 extension MyProfilePageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     

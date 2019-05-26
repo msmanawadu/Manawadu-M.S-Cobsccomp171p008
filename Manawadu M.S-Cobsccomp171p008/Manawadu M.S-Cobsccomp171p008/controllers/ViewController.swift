@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     //self.saveData()
         // Do any additional setup after loading the view.
     }
     
@@ -39,7 +38,4 @@ class ViewController: UIViewController {
     }
     
      var ref: DatabaseReference!
-    
-    
-    
 }

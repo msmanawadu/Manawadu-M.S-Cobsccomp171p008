@@ -41,11 +41,4 @@ class viewUserDetailsViewController: UIViewController {
         // giving the UI title
         self.title = "Friend Details"
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    */
 }
