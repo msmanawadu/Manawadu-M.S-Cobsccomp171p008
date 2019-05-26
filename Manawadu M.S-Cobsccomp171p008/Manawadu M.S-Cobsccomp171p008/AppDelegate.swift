@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import IQKeyboardManagerSwift
 
 
 @UIApplicationMain
@@ -23,7 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
         // Override point for customization after application launch.
+        
+        // enable the pod for IQ keyboard 
+        IQKeyboardManager.shared.enable = true
         return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

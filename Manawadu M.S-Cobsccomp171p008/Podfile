@@ -16,4 +16,5 @@ target 'Manawadu M.S-Cobsccomp171p008' do
   pod 'Alamofire', '~>4.4'
   pod 'Kingfisher', '~> 4.0' 
   pod 'GoogleSignIn'
+  pod 'IQKeyboardManagerSwift'
 end
