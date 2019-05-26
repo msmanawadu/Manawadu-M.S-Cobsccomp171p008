@@ -42,6 +42,9 @@ class userProfileView: UIViewController {
         
         // ImageView round edges
         self.profileImageView.layer.cornerRadius = self.profileImageView.bounds.height / 8
+        
+        // giving the UI title
+        self.title = "My Details"
 
         // Do any additional setup after loading the view.
     }

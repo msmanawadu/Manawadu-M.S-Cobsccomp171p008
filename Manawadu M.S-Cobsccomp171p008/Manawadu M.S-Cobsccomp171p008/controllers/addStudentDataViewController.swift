@@ -121,6 +121,9 @@ class addStudentDataViewController: UIViewController {
         doBtnAddPhoto.addTarget(self, action: #selector(openImgPick), for: .touchUpInside)
 
     
+        // giving the UI title
+        self.title = "Add a friend"
+        
     }
     
     // openImgPick function Definition

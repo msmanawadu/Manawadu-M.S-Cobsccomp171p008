@@ -36,7 +36,11 @@ class viewUserDetailsViewController: UIViewController {
         labelFBProfileURL.text = studentDetails.fbProfileURL
      
         // ImageView round edges
-        self.profileImageView.layer.cornerRadius = self.profileImageView.bounds.height / 8        }
+        self.profileImageView.layer.cornerRadius = self.profileImageView.bounds.height / 8
+        
+        // giving the UI title
+        self.title = "Friend Details"
+    }
     
     
     /*
