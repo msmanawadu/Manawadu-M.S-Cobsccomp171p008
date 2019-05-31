@@ -1,4 +1,4 @@
-# Name: Manawadu-M.S-Cobsccomp171p008
+# Name: Manawadu-M.S
 # ID(Coventry): 8511500
 # ID(NIBM): cobsccomp171p-008
 
